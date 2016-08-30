@@ -1,0 +1,237 @@
+<!-- intro -->
+<section id="intro" class="intro">
+  <div class="slogan">
+    <h2>D<span style="color:red;">a</span>bliu</h2>
+    <h4>Expertos en dise&ntilde;o de ropa interior masculina</h4>
+  </div>
+  </div>
+</section>
+<!-- /intro -->
+
+<!-- nosotros -->
+<section id="nosotros" class="home-section text-center">
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Nosotros</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+
+        <p>DABLIU define su filosof&iacute;a en puntos a destacar:
+        En la dedicaci&oacute;n y el compromiso para asumir cada uno de  los  integrantes y de los distintos niveles de producci&oacute;n y calidad para entregar a nuestros clientes nuestras colecciones.
+        De  esa manera, al cliente DABLIU  ser un hombre moderno, aventurero, futurista y de vanguardia.</p>
+        <p>Cada d&iacute;a seremos m&aacute;s expertos en el dise&ntilde;o y la producci&oacute;n de ropa interior Masculina. Esta condici&oacute;n, fundamentada, en la seguridad y garant&iacute;a que nos dar&aacute; el producto final, es lo que queremos transmitir a cada uno de nuestros clientes.
+        Con el tiempo la empresa crecer&aacute; GRACIAS a nuestros clientes.</p>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <%= for file_name <- ~w(mini01.jpg mini03.jpg mini02.jpg mini06.jpg mini05.jpg mini08.jpg mini07.jpg mini04.jpg) do %>
+          <div class="col-xs-6 col-sm-3 col-md-3">
+            <div class="wow bounceInUp" data-wow-delay="0.2s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <div class="avatar">
+                    <img src="<%= static_path(@conn, "/images/#{file_name}") %>" alt="boxer" class="img-responsive" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+</section>
+<!-- /nosotros -->
+
+<!-- venta -->
+<section id="venta" class="home-section text-center">
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Puntos de Venta</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+
+    <p><strong>Nazca 2571.</strong> Villa del Parque. CABA.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8999485706518!2d-58.48531099847317!3d-34.60669141481837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb61ff5041d0d%3A0x81cc2c064db12e26!2sNazca+2571%2C+C1417CUB+CABA!5e0!3m2!1ses-419!2sar!4v1455732780812" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <p>... proximamente muchos m&aacute;s.</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <%= for file_name <- ~w(mini3.jpg mini1.jpg mini2.jpg mini4.jpg) do %>
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <div class="wow bounceInUp" data-wow-delay="0.2s">
+            <div class="team boxed-grey">
+              <div class="inner">
+                <div class="avatar">
+                  <img src="<%= static_path(@conn, "/images/#{file_name}") %>" alt="boxer" class="img-responsive" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+</section>
+<!-- /venta -->
+
+<!-- contact -->
+<section id="contacto" class="home-section text-center">
+  <div class="heading-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Cont&aacute;ctanos</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="boxed-grey">
+          <form id="contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">
+                    Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" />
+                </div>
+                <div class="form-group">
+                  <label for="email">
+                    Email</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                    </span>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required="required" /></div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">
+                    Asunto</label>
+                  <select id="subject" name="subject" class="form-control" required="required">
+                    <option value="na" selected="">Seleccione:</option>
+                    <option value="service">Compras</option>
+                    <option value="suggestions">Sugerencias</option>
+                    <option value="product">Asistencia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">
+                    Mensaje</label>
+                  <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                                                                                placeholder="Mensaje"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                  Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="widget-contact">
+          <h5>Direcci&oacute;n</h5>
+
+          <address>
+            <strong>D<span style="color:red;">a</span>bliu</strong><br>
+            Taller: San Martin 933. CABA<br>
+            <abbr title="Teléfono">Whatsapp:</abbr> 15-5767-0463
+            <br>
+            <abbr title="Teléfono">Tel&eacute;fono:</abbr> 11-3814-5982
+          </address>
+
+          <address>
+            <strong>Email</strong><br>
+            <a href="mailto: dabliuunderwear@gmail.com">dabliuunderwear@gmail.com</a>
+          </address>	
+          <address>
+            <strong>Nuestras Redes</strong><br>
+            <ul class="company-social">
+              <li class="social-facebook"><a href="https://www.facebook.com/underweardabliu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-twitter"><a href="https://twitter.com/dabliu1973" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="social-instagram"><a href="https://www.instagram.com/wilson.sanabria.9406" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+          </address>					
+
+        </div>	
+      </div>
+    </div>	
+
+  </div>
+</section>
+<!-- /contact -->
