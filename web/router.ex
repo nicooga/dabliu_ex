@@ -17,10 +17,10 @@ defmodule DabliuEx.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-  end
+    get "/catálogos/:name", PageController, :show_catalog
 
-  # Other scopes may use custom stacks.
-  # scope "/api", DabliuEx do
-  #   pipe_through :api
-  # end
+    resources "/session", SessionController,
+      singleton: true,
+      only: ~w(new create destroy)
+  end
 end

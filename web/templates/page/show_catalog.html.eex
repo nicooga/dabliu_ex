@@ -1,0 +1,96 @@
+<!-- gallery
+  <section id="intro" class="intro"> -->
+    <div class="centergal">
+
+      <div style="margin-top:100px;" class="heading-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow bounceInDown" data-wow-delay="0.4s">
+                <div class="section-heading">
+                  <h2>Boxers</h2>
+                  <i class="fa fa-2x fa-angle-down"></i>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="big" class= "center">
+        <img src="img/img1.jpg" alt="Boxer 1" />
+        <p style="margin-top:15px;">Código C-V / Multicolor</p>
+      </div>
+
+      <div style="margin-top:10px;" id="miniaturas">
+        <img src="<%= static_path(@conn, "/images/img1.jpg") %>" alt="Código C-V / Multicolor" id="activo" width="130" />
+        <img src="<%= static_path(@conn, "/images/img24.jpg") %>" alt="Código C-V / Multicolor" id="activo" width="130" />
+        <img src="<%= static_path(@conn, "/images/img2.jpg") %>" alt="Código LUZ / Transparente blanco Único color" width="130" />
+        <img src="<%= static_path(@conn, "/images/img3.jpg") %>" alt="Código B-L / Azul" width="130" />
+        <img src="<%= static_path(@conn, "/images/img4.jpg") %>" alt="Código B-L / Verde" width="130" />
+        <img src="<%= static_path(@conn, "/images/img5.jpg") %>" alt="Código B-L / Fucsia" width="130" />
+        <img src="<%= static_path(@conn, "/images/img6.jpg") %>" alt="Código B-L / Blanco" width="130" />
+        <img src="<%= static_path(@conn, "/images/img14.jpg") %>" alt="Código B-L / Blanco" width="130" />
+        <img src="<%= static_path(@conn, "/images/img7.jpg") %>" alt="Código B-N-M / Líneas" width="130" />
+        <img src="<%= static_path(@conn, "/images/img17.jpg") %>" alt="Código B-N-M / Líneas" width="130" />
+        <img src="<%= static_path(@conn, "/images/img8.jpg") %>" alt="Código B-N / Líneas" width="130" />
+        <img src="<%= static_path(@conn, "/images/img15.jpg") %>" alt="Código B-N / Líneas" width="130" />
+        <img src="<%= static_path(@conn, "/images/img9.jpg") %>" alt="Código T-R / Atigrados " width="130" />
+        <img src="<%= static_path(@conn, "/images/img18.jpg") %>" alt="Código T-R / Atigrados " width="130" />
+        <img src="<%= static_path(@conn, "/images/img16.jpg") %>" alt="Código T-R-2 / Atigrados " width="130" />
+      </div>
+    </div>
+
+    <!-- </section> -->
+
+    <!-- tabla -->
+    <section id="venta" class="home-section text-center">
+      <div class="heading-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow bounceInDown" data-wow-delay="0.4s">
+                <div class="section-heading">
+                  <h2>Tabla de Talles</h2>
+                  <i class="fa fa-2x fa-angle-down"></i>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-2 col-lg-offset-5">
+
+          </div>
+        </div>
+        <div class="table-responsive col-lg-4 col-lg-offset-4">
+          <table class="table">
+
+            <tbody style="text-align: center;">
+              <tr>
+                <td>Talle S</td>
+                <td>Talle Americano 38-40</td>		
+              </tr>
+              <tr>
+                <td>Talle M</td>
+                <td>Talle Americano 41-42</td>		
+              </tr>
+              <tr>
+                <td>Talle L</td>
+                <td>Talle Americano 43-44</td>		
+              </tr>
+              <tr>
+                <td>Talle XL</td>
+                <td>Talle Americano 45-46</td>		
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+    </section>
+    <!-- /tabla -->

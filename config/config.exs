@@ -12,15 +12,26 @@ config :dabliu_ex,
 # Configures the endpoint
 config :dabliu_ex, DabliuEx.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "ZbuSfYd0NyjdY1XFymPoRkyZrdgE9EvBZDa9rFb3qi50OYMhTjnQPGIuVIuzc77D",
-  render_errors: [view: DabliuEx.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: DabliuEx.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  render_errors: [
+    view: DabliuEx.ErrorView,
+    accepts: ~w(html json)
+  ],
+  pubsub: [
+    name: DabliuEx.PubSub,
+    adapter: Phoenix.PubSub.PG2
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
+config :guardian, Guardian,
+  issuer: "DabliuEx",
+  ttl: { 30, :days },
+  secret_key: System.get_env("SECRET_KEY_BASE"),
+  serializer: DabliuEx.GuardianSerializer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
