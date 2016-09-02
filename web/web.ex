@@ -19,7 +19,6 @@ defmodule DabliuEx.Web do
   def model do
     quote do
       use Ecto.Schema
-      use DabliuEx.CustomSetters
 
       import Ecto
       import Ecto.Changeset

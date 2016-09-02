@@ -30,7 +30,6 @@ defmodule DabliuEx.Mixfile do
         gettext
         phoenix_ecto
         postgrex
-        dotenv
       )a
     ]
   end
@@ -53,9 +52,8 @@ defmodule DabliuEx.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:guardian, "~> 0.12.0"},
-      {:comeonin, "~> 2.5"},
-      {:dotenv, "~> 2.0.0"},
-      {:guardian, "~> 0.12.0"}
+      {:addict, git: "https://github.com/trenpixster/addict"},
+      {:envy, "~> 1.0.0"}
     ]
   end
 

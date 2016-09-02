@@ -1,11 +1,4 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     DabliuEx.Repo.insert!(%DabliuEx.SomeModel{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+Addict.Interactors.Register.call(%{
+  "email" => "2112.oga@gmail.com",
+  "password" => "dabliu2016"
+})
