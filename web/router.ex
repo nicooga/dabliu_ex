@@ -14,7 +14,10 @@ defmodule DabliuEx.Router do
   end
 
   scope "/admin" do
+    pipe_through :browser
+
     addict :routes
+    get "/", DabliuEx.AdminController, :index
   end
 
   scope "/", DabliuEx do

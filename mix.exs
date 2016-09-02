@@ -53,7 +53,8 @@ defmodule DabliuEx.Mixfile do
       {:cowboy, "~> 1.0"},
       {:guardian, "~> 0.12.0"},
       {:addict, git: "https://github.com/trenpixster/addict"},
-      {:envy, "~> 1.0.0"}
+      {:envy, "~> 1.0.0"},
+      {:phoenix_slime, "~> 0.6.0"}
     ]
   end
 

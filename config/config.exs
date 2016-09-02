@@ -14,6 +14,10 @@ secret_key = case System.get_env("SECRET_KEY") do
   str -> str
 end
 
+config :phoenix, :template_engines,
+  slim: PhoenixSlime.Engine,
+  slime: PhoenixSlime.Engine
+
 # General application configuration
 config :dabliu_ex,
   ecto_repos: [DabliuEx.Repo]
