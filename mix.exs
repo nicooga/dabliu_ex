@@ -22,6 +22,7 @@ defmodule DabliuEx.Mixfile do
     [
       mod: {DabliuEx, []},
       applications: ~w(
+        ja_resource
         phoenix
         phoenix_pubsub
         phoenix_html
@@ -54,7 +55,8 @@ defmodule DabliuEx.Mixfile do
       {:guardian, "~> 0.12.0"},
       {:addict, git: "https://github.com/trenpixster/addict"},
       {:envy, "~> 1.0.0"},
-      {:phoenix_slime, "~> 0.6.0"}
+      {:phoenix_slime, "~> 0.6.0"},
+      {:ja_resource, git: "https://github.com/AgilionApps/ja_resource.git"},
     ]
   end
 

@@ -55,6 +55,22 @@ defmodule DabliuEx.Web do
     end
   end
 
+  def jsonapi_controller do
+    quote do
+      unquote(controller)
+      use JaResource
+      plug JaResource
+    end
+  end
+
+  def jsonapi_view do
+    quote do
+      unquote(view)
+      use JaSerializer.PhoenixView
+      use DabliuEx.JsonApiView
+    end
+  end
+
   def router do
     quote do
       use Phoenix.Router

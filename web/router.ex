@@ -10,7 +10,9 @@ defmodule DabliuEx.Router do
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug :accepts, ["json-api"]
+    plug JaSerializer.ContentTypeNegotiation
+    plug JaSerializer.Deserializer
   end
 
   scope "/admin" do
@@ -18,6 +20,12 @@ defmodule DabliuEx.Router do
 
     addict :routes
     get "/", DabliuEx.AdminController, :index
+  end
+
+  scope "/api", DabliuEx do
+    pipe_through :api
+
+    resources "/catalogs", CatalogController
   end
 
   scope "/", DabliuEx do

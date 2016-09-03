@@ -1,8 +1,8 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
 #
-# This configuration file is loaded before any dependency and
 # is restricted to this project.
+# This configuration file is loaded before any dependency and
 use Mix.Config
 
 secret_key = case System.get_env("SECRET_KEY") do
@@ -13,10 +13,19 @@ secret_key = case System.get_env("SECRET_KEY") do
     end
   str -> str
 end
+config :phoenix, :format_encoders,
+  "json-api": Poison
+
+config :mime, :types, %{
+  "application/vnd.api+json" => ["json-api"]
+}
 
 config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine
+
+config :ja_resource,
+  repo: DabliuEx.Repo
 
 # General application configuration
 config :dabliu_ex,
