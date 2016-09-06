@@ -5,11 +5,11 @@ defmodule DabliuEx.Repo.Migrations.CreateCatalog.Item do
     create table(:catalog_items) do
       add :position, :integer
       add :image, :string
-      add :catalog, references(:catalogs, on_delete: :nothing)
+      add :catalog_id, references(:catalogs, on_delete: :nothing)
 
       timestamps()
     end
 
-    create index(:catalog_items, [:catalog])
+    create index(:catalog_items, [:catalog_id])
   end
 end

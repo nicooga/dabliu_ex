@@ -1,11 +1,12 @@
 defmodule DabliuEx.Catalog do
   use DabliuEx.Web, :model
 
-  @allowed_attrs [:name]
-  @required_attrs [:name]
+  @allowed_attrs ~w(name)a
+  @required_attrs ~w(name)a
 
   schema "catalogs" do
     field :name, :string
+    has_many :items, __MODULE__.Item
     timestamps()
   end
 
@@ -14,5 +15,6 @@ defmodule DabliuEx.Catalog do
     |> cast(params, @allowed_attrs)
     |> validate_required(@required_attrs)
     |> unique_constraint(:name)
+    |> cast_assoc(:items)
   end
 end

@@ -1,14 +1,14 @@
 defmodule DabliuEx.Catalog.Item do
   use DabliuEx.Web, :model
-  
-  @allowed_attrs [:position, :image]
-  @required_attrs [:position, :image]
+  use DabliuEx.ArcModel, fields: [:image]
+
+  @allowed_attrs ~w(position image catalog_id)a
+  @required_attrs ~w(position image catalog_id)a
 
   schema "catalog_items" do
     field :position, :integer
     field :image, :string
     belongs_to :catalog, DabliuEx.Catalog
-
     timestamps()
   end
 

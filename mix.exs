@@ -31,6 +31,7 @@ defmodule DabliuEx.Mixfile do
         gettext
         phoenix_ecto
         postgrex
+        arc_ecto
       )a
     ]
   end
@@ -57,6 +58,8 @@ defmodule DabliuEx.Mixfile do
       {:envy, "~> 1.0.0"},
       {:phoenix_slime, "~> 0.6.0"},
       {:ja_resource, git: "https://github.com/AgilionApps/ja_resource.git"},
+      {:arc, git: "https://github.com/stavro/arc.git", override: true},
+      {:arc_ecto, "~> 0.4.3"}
     ]
   end
 

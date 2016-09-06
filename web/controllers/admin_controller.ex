@@ -1,7 +1,7 @@
 defmodule DabliuEx.AdminController do
   use DabliuEx.Web, :controller
 
-  plug :put_layout, false
+  plug :put_layout, :admin
 
-  def index(conn, _params), do: render conn, "index.html"
+  def index(conn, _params), do: render conn, :index
 end

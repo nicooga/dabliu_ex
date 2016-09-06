@@ -25,7 +25,9 @@ defmodule DabliuEx.Router do
   scope "/api", DabliuEx do
     pipe_through :api
 
-    resources "/catalogs", CatalogController
+    resources "/catalogs", CatalogController, only: [:index, :show] do
+      resources "/items", Catalog.ItemController
+    end
   end
 
   scope "/", DabliuEx do
